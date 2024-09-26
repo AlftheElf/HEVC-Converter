@@ -16,14 +16,14 @@ def write_dat(name,BOOL):
 def read_dat(name):
 
 	with open("/Users/admin/Documents/Scripts/Automation/HEVCConverter/shutdown.dat", "r") as file:
-	    for line in file:
-	        text = line.split('.')[0]
+		for line in file:
+			text = line.split('.')[0]
 		if text == "TRUE":
-	        	return True
-	        elif text == "FALSE":
-	        	return False
-			else:
-				click.secho('''Error: read_dat() couldn't read dat file''',fg='red')
+			return True
+		elif text == "FALSE":
+			return False
+		else:
+			click.secho('''Error: read_dat() couldn't read dat file''',fg='red')
 
 
 @click.command()
